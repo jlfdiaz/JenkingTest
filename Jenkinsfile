@@ -4,5 +4,9 @@ node  {
     stage('Test') {sh 'mvn test'
                    junit '**/target/*.xml'
                   }
-    stage('Deploy') { echo 'Deploimnet...'}
+    stage('Deploy') { 
+        withMaven { 
+            maven 'Maven Test'
+        }
+        sh 'mvn package'
 }
