@@ -1,6 +1,6 @@
 node {
     
-    stage('Build') steps { echo 'Building...'}
-    stage('Test') steps { echo 'Testing...'}
-        stage('Deploy') steps { echo 'Deploimnet...'}
+    stage('Build') step { echo 'Building...'}
+    stage('Test') step { echo 'Testing...'}
+        stage('Deploy') step { echo 'Deploimnet...'}
 }
