@@ -5,8 +5,9 @@ node  {
                    junit '**/target/*.xml'
                   }
     stage('Deploy') { 
-        withMaven { 
+            withMaven {
             maven 'Maven Test'
-        }
+            }
         sh 'mvn package'
+        }
 }
