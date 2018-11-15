@@ -2,19 +2,19 @@ node  {
     checkout scm
     stage('Build') {
             withMaven (
-            maven:'Maven Test'
+            maven:'Maven test'
             )
         sh 'mvn compile'
         }
     stage('Test') { 
             withMaven (
-            maven:'Maven Test'
+            maven:'Maven test'
             )
         sh 'mvn test'
         }
     stage('Deploy') { 
             withMaven (
-            maven:'Maven Test'
+            maven:'Maven test'
             )
         sh 'mvn package'
         }
