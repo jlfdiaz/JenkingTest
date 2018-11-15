@@ -20,6 +20,5 @@ node  {
             ) {
         sh 'mvn package'
         }
-        DeleteDir();
     }
 }
