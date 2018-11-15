@@ -1,6 +1,8 @@
 node  {
     checkout scm
-    stage('Build')  { echo 'Building...'}
-    stage('Test') { echo 'Testing...'}
+    stage('Build')  { sh 'mvn compile'}
+    stage('Test') {sh 'mvn test'
+                   junit '**/target/*.xml'
+                  }
     stage('Deploy') { echo 'Deploimnet...'}
 }
