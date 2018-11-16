@@ -20,8 +20,6 @@ node  {
             ) {
         sh 'mvn package'
         }
-        git add target
-        git commit -am 'OK'
     }
     
 }
